@@ -7,10 +7,12 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
+    "new": "hygen sketch new",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/p5": "^1.4.0",
+    "hygen": "^6.1.0",
     "vite": "^2.7.2"
   }
 }
