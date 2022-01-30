@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/p5@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-1.4.0.tgz#6d5e9874fa77b2906172633bddbb053e1d20cd96"
+  integrity sha512-rhRG1FWaqrr+dzx5gMeADw194Q25hs73bzW1meKU69qFec1EhDGXhljydVL2D/Php5IBmlbX6XW3d+WyEACy/g==
+
 esbuild-android-arm64@0.13.15:
   version "0.13.15"
   resolved "https://registry.yarnpkg.com/esbuild-android-arm64/-/esbuild-android-arm64-0.13.15.tgz#3fc3ff0bab76fe35dd237476b5d2b32bb20a3d44"
@@ -139,6 +144,11 @@ nanoid@^3.1.30:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
   integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
 
+p5@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-1.4.0.tgz#d4d0f001c297525831861af5e017cdb5ef517a75"
+  integrity sha512-U888W2ChcIzPhRhnv4FkNhaa4f5BDIWZfLhzvx9ZrQ5KtkZr/+o1UPIicV3yWTRy0HEG23NviHyDR3kgjaJ9wA==
+
 path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
@@ -173,6 +183,11 @@ rollup@^2.59.0:
   integrity sha512-crSgLhSkLMnKr4s9iZ/1qJCplgAgrRY+igWv8KhG/AjKOJ0YX/WpmANyn8oxrw+zenF3BXWDLa7Xl/QZISH+7w==
   optionalDependencies:
     fsevents "~2.3.2"
+
+sanitize.css@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-13.0.0.tgz#2675553974b27964c75562ade3bd85d79879f173"
+  integrity sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==
 
 source-map-js@^1.0.1:
   version "1.0.2"

@@ -9,7 +9,12 @@
     "dev": "vite",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "p5": "^1.4.0",
+    "sanitize.css": "^13.0.0"
+  },
   "devDependencies": {
+    "@types/p5": "^1.4.0",
     "vite": "^2.7.2"
   }
 }
