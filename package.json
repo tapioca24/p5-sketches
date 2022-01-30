@@ -1,0 +1,15 @@
+{
+  "name": "p5-sketches",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "mitani24 <h.mitani@ashita-team.com>",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.7.2"
+  }
+}
