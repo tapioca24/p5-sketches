@@ -1,9 +1,7 @@
 /// <reference path="../../node_modules/@types/p5/global.d.ts" />
-import "p5";
-import "sanitize.css";
 Object.assign(window, { setup, draw, mouseClicked, keyReleased });
 
-export const COOLORS_URLS = [
+const COOLORS_URLS = [
   "https://coolors.co/f4f1de-e07a5f-3d405b-81b29a-f2cc8f",
   "https://coolors.co/fdfcdc-fed9b7-f07167-d62246-4b1d3f",
   "https://coolors.co/faf0ca-f4d35e-ee964b-f95738-080707",
