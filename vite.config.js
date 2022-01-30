@@ -37,7 +37,6 @@ module.exports = defineConfig(async () => {
     build: {
       rollupOptions: {
         input: {
-          main: resolve(__dirname, "index.html"),
           ...(await sketchInputs()),
         },
       },
