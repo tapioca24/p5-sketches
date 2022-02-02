@@ -1,4 +1,4 @@
-import fs from "fs";
+const fs = require("fs");
 const { resolve, join } = require("path");
 const { defineConfig } = require("vite");
 

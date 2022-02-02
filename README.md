@@ -25,3 +25,15 @@ yarn dev sketches/my-awesome-sketch
 ```sh
 yarn build
 ```
+
+## Lint
+
+```sh
+yarn lint
+```
+
+## Format
+
+```sh
+yarn format
+```
