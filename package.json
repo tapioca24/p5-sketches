@@ -5,12 +5,14 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
+    "format": "prettier --write .",
     "new": "hygen sketch new",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/p5": "^1.4.0",
     "hygen": "^6.1.0",
+    "prettier": "^2.5.1",
     "vite": "^2.7.2"
   }
 }
