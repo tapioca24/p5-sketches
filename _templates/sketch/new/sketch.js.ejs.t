@@ -1,8 +1,7 @@
 ---
-to: sketches/<%= name %>/sketch.js
+to: src/<%= name %>/sketch.js
 ---
 /// <reference path="../../node_modules/@types/p5/global.d.ts" />
-Object.assign(window, { setup, draw, keyReleased });
 
 function setup() {
   createCanvas(800, 800);

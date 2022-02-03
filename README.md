@@ -16,20 +16,18 @@ yarn new my-awesome-sketch
 
 ## Development
 
-```sh
-yarn dev sketches/my-awesome-sketch
-```
-
-## Build
-
-```sh
-yarn build
-```
+1. Open this project in VSCode
+2. Open the `index.html` file of the sketch
+3. Select "Live Preview: Show Preview (External Browser)" from the command palette
+4. Go to `sketch.js` in the same directory and enjoy coding
 
 ## Lint
 
 ```sh
 yarn lint
+
+# with autofix
+yarn lint:fix
 ```
 
 ## Format

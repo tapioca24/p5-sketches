@@ -1,5 +1,4 @@
-/// <reference path="../../node_modules/@types/p5/global.d.ts" />
-Object.assign(window, { setup, draw, mouseClicked, keyReleased });
+/// <reference path="../..//node_modules/@types/p5/global.d.ts" />
 
 const COOLORS_URLS = [
   "https://coolors.co/f4f1de-e07a5f-3d405b-81b29a-f2cc8f",
