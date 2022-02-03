@@ -1,6 +1,6 @@
 # p5-sketches
 
-> my development environment for [p5.js](https://p5js.org/) sketches
+> My development environment for [p5.js](https://p5js.org/) sketches
 
 ## Installation
 
@@ -19,7 +19,7 @@ yarn new my-awesome-sketch
 1. Open this project in VSCode
 2. Open the `index.html` file of the sketch
 3. Select "Live Preview: Show Preview (External Browser)" from the command palette
-4. Go to `sketch.js` in the same directory and enjoy coding
+4. Go to `sketch.js` in the same directory and enjoy coding :tada:
 
 ## Lint
 
