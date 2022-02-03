@@ -146,11 +146,3 @@ dist
 
 # Built Visual Studio Code Extensions
 *.vsix
-
-### custom
-
-# Vite vanilla template
-.DS_Store
-dist
-dist-ssr
-*.local
