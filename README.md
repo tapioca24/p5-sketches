@@ -1,6 +1,6 @@
 # p5-sketches
 
-> My development environment for [p5.js](https://p5js.org/) sketches
+My [p5.js](https://p5js.org/) sketches
 
 ## Installation
 
@@ -11,27 +11,22 @@ yarn install
 ## Create new sketch
 
 ```sh
-yarn new my-awesome-sketch
+yarn new <sketch name>
 ```
 
-## Development
+## Other scripts
 
-1. Open this project in VSCode
-2. Open the `index.html` file of the sketch
-3. Select "Live Preview: Show Preview (External Browser)" from the command palette
-4. Go to `sketch.js` in the same directory and enjoy coding :tada:
+### Code formatting
 
-## Lint
+```sh
+yarn format
+```
+
+### Linting
 
 ```sh
 yarn lint
 
 # with autofix
 yarn lint:fix
-```
-
-## Format
-
-```sh
-yarn format
 ```
