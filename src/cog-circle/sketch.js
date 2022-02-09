@@ -1,5 +1,9 @@
 /// <reference path="../../node_modules/@types/p5/global.d.ts" />
 
+const browser = bowser.getParser(window.navigator.userAgent).parsedResult;
+const isMobile = browser.platform.type === "mobile";
+const isTablet = browser.platform.type === "tablet";
+
 const COOLORS_URLS = [
   "https://coolors.co/36213e-554971-a3a5c3-a9d2d5-cbf3d2",
   "https://coolors.co/fdbb6d-d77280-b16986-695c78-435675",
@@ -16,8 +20,9 @@ let myCircle;
 let g;
 
 function setup() {
-  createCanvas(800, 800);
-  noLoop();
+  const canvasWidth = isMobile || isTablet ? windowWidth : 800;
+  const canvasHeight = isMobile || isTablet ? windowHeight : 800;
+  createCanvas(canvasWidth, canvasHeight);
   initialize();
 
   // create noise graphics
@@ -46,6 +51,7 @@ function draw() {
 
   push();
   translate(width / 2, height / 2);
+  scale(-1, 1);
   myCircle.draw();
   pop();
 
@@ -114,6 +120,7 @@ class MyArc {
     this.angle = angle;
     this.length = length;
     this.weight = weight;
+    this.vel = -TAU * 0.0001 * random(1, 15);
     this.col = color(col.levels);
     this.shadowColor = this.getShadowColor(col);
   }
@@ -126,14 +133,9 @@ class MyArc {
     stroke(this.col);
     drawingContext.shadowColor = this.shadowColor;
 
-    arc(
-      this.x,
-      this.y,
-      this.radius,
-      this.radius,
-      this.angle,
-      this.angle + this.length
-    );
+    const start = this.angle + frameCount * this.vel;
+    const stop = start + this.length;
+    arc(this.x, this.y, this.radius, this.radius, start, stop);
     pop();
   }
 
