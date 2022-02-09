@@ -9,6 +9,7 @@ to: src/<%= name %>/index.html
     <title><%= name %></title>
     <link rel="stylesheet" href="https://unpkg.com/sanitize.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bowser@latest/es5.min.js"></script>
   </head>
   <body>
     <script src="./sketch.js"></script>

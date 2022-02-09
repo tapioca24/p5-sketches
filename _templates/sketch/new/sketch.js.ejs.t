@@ -3,8 +3,14 @@ to: src/<%= name %>/sketch.js
 ---
 /// <reference path="../../node_modules/@types/p5/global.d.ts" />
 
+const browser = bowser.getParser(window.navigator.userAgent).parsedResult;
+const isMobile = browser.platform.type === "mobile";
+const isTablet = browser.platform.type === "tablet";
+
 function setup() {
-  createCanvas(800, 800);
+  const canvasWidth = isMobile || isTablet ? windowWidth : 800;
+  const canvasHeight = isMobile || isTablet ? windowHeight : 800;
+  createCanvas(canvasWidth, canvasHeight);
   background(30);
 }
 
