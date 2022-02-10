@@ -23,6 +23,7 @@ function setup() {
   const canvasWidth = isMobile || isTablet ? windowWidth : 800;
   const canvasHeight = isMobile || isTablet ? windowHeight : 800;
   createCanvas(canvasWidth, canvasHeight);
+  frameRate(30);
   initialize();
 
   // create noise graphics
@@ -120,7 +121,7 @@ class MyArc {
     this.angle = angle;
     this.length = length;
     this.weight = weight;
-    this.vel = -TAU * 0.0001 * random(1, 15);
+    this.vel = -TAU * 0.0001 * random(1, 30);
     this.col = color(col.levels);
     this.shadowColor = this.getShadowColor(col);
   }
