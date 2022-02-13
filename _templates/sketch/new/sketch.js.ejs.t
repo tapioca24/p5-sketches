@@ -20,6 +20,6 @@ function draw() {
 
 function keyReleased() {
   if (key === "s") {
-    save("sketch");
+    saveCanvas("sketch");
   }
 }
