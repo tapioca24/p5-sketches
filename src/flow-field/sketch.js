@@ -1,4 +1,4 @@
-/// <reference path="../../node_modules/@types/p5/global.d.ts" />
+/// <reference types="p5/global" />
 
 let points = [];
 let m;

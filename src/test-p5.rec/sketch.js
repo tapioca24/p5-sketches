@@ -1,4 +1,4 @@
-/// <reference path="../../node_modules/@types/p5/global.d.ts" />
+/// <reference types="p5/global" />
 
 function setup() {
   createCanvas(400, 400, WEBGL);

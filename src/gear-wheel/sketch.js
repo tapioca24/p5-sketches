@@ -1,4 +1,4 @@
-/// <reference path="../../node_modules/@types/p5/global.d.ts" />
+/// <reference types="p5/global" />
 
 const browser = bowser.getParser(window.navigator.userAgent).parsedResult;
 const isMobile = browser.platform.type === "mobile";
