@@ -8,8 +8,8 @@ const isMobile = browser.platform.type === "mobile";
 const isTablet = browser.platform.type === "tablet";
 
 function setup() {
-  const canvasWidth = isMobile || isTablet ? windowWidth : 800;
-  const canvasHeight = isMobile || isTablet ? windowHeight : 800;
+  const canvasWidth = isMobile || isTablet ? windowWidth : 720;
+  const canvasHeight = isMobile || isTablet ? windowHeight : 720;
   createCanvas(canvasWidth, canvasHeight);
   background(30);
 }
