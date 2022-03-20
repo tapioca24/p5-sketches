@@ -11,6 +11,7 @@ function setup() {
   const canvasWidth = isMobile || isTablet ? windowWidth : 720;
   const canvasHeight = isMobile || isTablet ? windowHeight : 720;
   createCanvas(canvasWidth, canvasHeight);
+  frameRate(30);
   background(30);
 }
 

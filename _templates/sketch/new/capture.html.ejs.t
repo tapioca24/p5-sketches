@@ -11,6 +11,13 @@ to: src/<%= name %>/capture.html
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5.capture"></script>
     <script src="https://cdn.jsdelivr.net/npm/bowser@2.11.0"></script>
+    <script>
+      P5Capture.setDefaultOptions({
+        format: "mp4",
+        bitrate: 5000,
+        disableScaling: true,
+      });
+    </script>
   </head>
   <body>
     <script src="./sketch.js"></script>
