@@ -6,7 +6,8 @@
     "format": "prettier --write --ignore-path config/.prettierignore .",
     "lint": "eslint --config config/.eslintrc.js --ignore-path config/.eslintignore './**/*.{js,ts}'",
     "lint:fix": "eslint --config config/.eslintrc.js --ignore-path config/.eslintignore --fix './**/*.{js,ts}'",
-    "new": "hygen sketch new"
+    "new": "hygen sketch new",
+    "cover:devto": "hygen cover devto"
   },
   "devDependencies": {
     "@fal-works/eslint-config-p5js": "^1.0.3",
