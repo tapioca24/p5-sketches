@@ -5,7 +5,6 @@ const MAIN_FONT_COLOR = "#fff";
 const SUB_FONT_COLOR = "#ccc";
 
 const TITLE = "I wrote a new library\nfor recording p5.js sketches";
-const DESCRIPTION = "";
 
 const BG_IMAGE_PATH =
   "https://images.unsplash.com/photo-1558470598-a5dda9640f68";
@@ -32,9 +31,9 @@ function draw() {
   background(BG_COLOR);
   drawBackgroundImage(bgImg, 0.7);
   drawServiceIcon(serviceImg, 25, 60);
-  drawUser(iconImg, "@tapioca24", 25, 60);
-  drawTitle(TITLE, 70, 120);
-  drawDescription(DESCRIPTION, 70, 240);
+
+  drawTitle(TITLE, 0.4);
+  drawUser(iconImg, "@tapioca24", 0.65, 50);
 }
 
 function keyReleased() {
@@ -73,7 +72,7 @@ function drawServiceIcon(img, offset, size) {
   pop();
 }
 
-function drawUser(img, username, offset, size) {
+function drawUser(img, username, v, size) {
   const ratio = min(size / img.width, size / img.height);
 
   const g = createGraphics(img.width, img.height);
@@ -81,43 +80,44 @@ function drawUser(img, username, offset, size) {
   g.circle(g.width / 2, g.height / 2, min(g.width, g.height));
   img.mask(g);
 
-  push();
-  translate(offset, height - (size + offset));
-
-  push();
-  scale(ratio);
-  image(img, 0, 0);
-  pop();
-
-  push();
-  const fontSize = size * 0.4;
-  translate(size * 1.2, size * 0.5 - fontSize * 0.2);
-  textFont(myFont);
-  fill(SUB_FONT_COLOR);
-  textSize(fontSize);
-  textAlign(LEFT, CENTER);
-  text(username, 0, 0);
-  pop();
-
-  pop();
+  {
+    push();
+    const fontSize = size * 0.4;
+    textFont(myFont);
+    textSize(fontSize);
+    textAlign(LEFT, CENTER);
+    const sWidth = textWidth(username);
+    const padding = size * 0.2;
+    const totalWidth = sWidth + padding + size;
+    {
+      push();
+      translate((width - totalWidth) / 2, height * v);
+      {
+        push();
+        scale(ratio);
+        image(img, 0, 0);
+        pop();
+      }
+      {
+        push();
+        translate(size * 1.2, size * 0.5 - fontSize * 0.2);
+        fill(SUB_FONT_COLOR);
+        text(username, 0, 0);
+        pop();
+      }
+      pop();
+    }
+    pop();
+  }
 }
 
-function drawTitle(title, x, y) {
+function drawTitle(title, v) {
   push();
-  translate(x, y);
+  translate(width / 2, height * v);
   textFont(myFont);
   fill(MAIN_FONT_COLOR);
   textSize(52);
+  textAlign(CENTER);
   text(title, 0, 0);
-  pop();
-}
-
-function drawDescription(message, x, y) {
-  push();
-  translate(x, y);
-  textFont(myFont);
-  fill(SUB_FONT_COLOR);
-  textSize(24);
-  text(message, 0, 0);
   pop();
 }
