@@ -7,7 +7,7 @@ let palette;
 let count;
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(720, 720);
   noiseDetail(1);
 
   drawingContext.shadowOffsetX = 5;
@@ -55,14 +55,10 @@ function draw() {
   count++;
 }
 
-function keyReleased() {
-  if (key === "s") {
-    save("sketch");
+function keyPressed() {
+  if (keyCode === ENTER) {
+    initialize();
   }
-}
-
-function mouseClicked() {
-  initialize();
 }
 
 class Brush {

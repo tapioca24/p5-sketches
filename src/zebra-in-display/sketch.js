@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(720, 720);
   background(30);
   noLoop();
 
@@ -69,10 +69,4 @@ function getPixel(ratioX, ratioY) {
   const g = img.pixels[index + 1];
   const b = img.pixels[index + 2];
   return color(r, g, b);
-}
-
-function keyReleased() {
-  if (key === "s") {
-    save("sketch");
-  }
 }

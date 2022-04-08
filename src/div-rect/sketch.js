@@ -12,8 +12,8 @@ const COOLORS_URLS = [
 let g, colors, targetRatio, sizeLimit;
 
 function setup() {
-  createCanvas(800, 800);
-  frameRate(1 / 2);
+  createCanvas(720, 720);
+  noLoop();
 
   // create noise graphics
   g = createGraphics(width, height);
@@ -40,13 +40,9 @@ function draw() {
   image(g, 0, 0);
 }
 
-function mouseClicked() {
-  redraw();
-}
-
-function keyReleased() {
-  if (key === "s") {
-    save("sketch");
+function keyPressed() {
+  if (keyCode === ENTER) {
+    redraw();
   }
 }
 

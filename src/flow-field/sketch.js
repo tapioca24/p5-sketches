@@ -6,7 +6,7 @@ let r1, r2, g1, g2, b1, b2;
 let palette;
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(720, 720);
   noiseDetail(1);
   initialize();
 }
@@ -25,15 +25,11 @@ function draw() {
   });
 }
 
-function keyReleased() {
-  if (key === "s") {
-    save("sketch");
+function keyPressed() {
+  if (keyCode === ENTER) {
+    clear();
+    initialize();
   }
-}
-
-function mouseClicked() {
-  clear();
-  initialize();
 }
 
 function initialize() {

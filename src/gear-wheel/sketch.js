@@ -1,9 +1,5 @@
 /// <reference types="p5/global" />
 
-const browser = bowser.getParser(window.navigator.userAgent).parsedResult;
-const isMobile = browser.platform.type === "mobile";
-const isTablet = browser.platform.type === "tablet";
-
 const COOLORS_URLS = [
   "https://coolors.co/36213e-554971-a3a5c3-a9d2d5-cbf3d2",
   "https://coolors.co/fdbb6d-d77280-b16986-695c78-435675",
@@ -20,9 +16,7 @@ let myCircle;
 let g;
 
 function setup() {
-  const canvasWidth = isMobile || isTablet ? windowWidth : 800;
-  const canvasHeight = isMobile || isTablet ? windowHeight : 800;
-  createCanvas(canvasWidth, canvasHeight);
+  createCanvas(720, 720);
   frameRate(30);
   initialize();
 
@@ -59,15 +53,11 @@ function draw() {
   image(g, 0, 0);
 }
 
-function keyReleased() {
-  if (key === "s") {
-    save("sketch");
+function keyPressed() {
+  if (keyCode === ENTER) {
+    initialize();
+    redraw();
   }
-}
-
-function mouseClicked() {
-  initialize();
-  redraw();
 }
 
 class MyCircle {

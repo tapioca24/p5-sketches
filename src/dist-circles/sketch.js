@@ -3,7 +3,7 @@
 // Sutra copying from https://twitter.com/ryotakob/status/1489802209684459522
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(720, 720);
   noLoop();
 }
 
@@ -20,14 +20,10 @@ function draw() {
   }
 }
 
-function keyReleased() {
-  if (key === "s") {
-    save("sketch");
+function keyPressed() {
+  if (keyCode === ENTER) {
+    redraw();
   }
-}
-
-function mouseClicked() {
-  redraw();
 }
 
 function getRadius(x, y) {

@@ -1,7 +1,7 @@
 /// <reference types="p5/global" />
 // refer to https://timrodenbroeker.de/processing-tutorial-kinetic-typography-1/
 
-const fps = 60;
+const fps = 30;
 const bg = "#223843";
 const fontColor = "#ffd500";
 let pg, myFont;
@@ -70,11 +70,5 @@ function draw() {
         dh
       );
     }
-  }
-}
-
-function keyReleased() {
-  if (key === "s") {
-    saveCanvas("sketch");
   }
 }
