@@ -11,7 +11,7 @@ yarn install
 ## Create new sketch
 
 ```sh
-yarn new <sketch name>
+yarn new:sketch <sketch name>
 ```
 
 ## Other scripts
