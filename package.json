@@ -7,7 +7,7 @@
     "lint": "eslint --config config/.eslintrc.js --ignore-path config/.eslintignore './**/*.{js,ts}'",
     "lint:fix": "eslint --config config/.eslintrc.js --ignore-path config/.eslintignore --fix './**/*.{js,ts}'",
     "new:cover": "hygen cover new",
-    "new:sketch": "hygen sketch new"
+    "new:sketch": "hygen sketch new `date '+%Y%m%d-%H%M%S'`"
   },
   "devDependencies": {
     "@fal-works/eslint-config-p5js": "^1.0.3",
