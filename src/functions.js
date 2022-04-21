@@ -27,12 +27,12 @@ function lerpColors(palette, amount) {
 
   if (amount <= 0) {
     const c = palette[0];
-    return color(c.levels);
+    return color(c.toString());
   }
 
   if (amount >= 1) {
     const c = palette[palette.length - 1];
-    return color(c.levels);
+    return color(c.toString());
   }
 
   const len = palette.length;
